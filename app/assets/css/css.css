@@ -1,0 +1,16 @@
+:root {
+    --tc1: white;
+    --bg1: gray;
+    --bg2: darkgray;
+    --dc1: blue;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--tc1);
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scrollbar-width: 0;
+}
