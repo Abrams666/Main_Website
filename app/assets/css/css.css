@@ -1,8 +1,11 @@
 :root {
     --tc1: white;
-    --bg1: gray;
-    --bg2: darkgray;
-    --dc1: blue;
+    --bg1: #333;
+    --bg2: #222;
+    --dc1: rgb(0, 174, 255);
+}
+::-webkit-scrollbar {
+    display: none;
 }
 * {
     margin: 0;
@@ -12,5 +15,4 @@
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
-    scrollbar-width: 0;
 }
