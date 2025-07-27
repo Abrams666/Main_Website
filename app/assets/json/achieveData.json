@@ -1,0 +1,211 @@
+[
+    {
+        "id": 1,
+        "title": "APCS",
+        "date": "10/22/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["觀念題:第三級;實作題:第三級", "教育部"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 2,
+        "title": "TOEIC",
+        "date": "08/27/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["620", "TOEIC"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 3,
+        "title": "APCS大學程式設計先修檢測-零基礎入門班",
+        "date": "07/25/2022~07/28/2022",
+        "content": {
+            "title": ["Bureau"],
+            "content": ["國立中山大學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 4,
+        "title": "APCS大學程式設計先修檢測-實戰進階班",
+        "date": "07/20/2023~07/23/2023",
+        "content": {
+            "title": ["Bureau"],
+            "content": ["國立中山大學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 5,
+        "title": "高中職程式設計教育選手培訓研習營",
+        "date": "10/15/2022~10/16/2022",
+        "content": {
+            "title": ["Bureau"],
+            "content": ["高雄市政府教育局"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 6,
+        "title": "專題研究成果發表決賽",
+        "date": "06/29/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["特優", "高雄市立三民高級中學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 7,
+        "title": "中小學科學展覽會",
+        "date": "04/29/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["入選複賽", "高雄市政府教育局"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 8,
+        "title": "高中資訊學科能力複賽暨高職電腦程式設計比賽",
+        "date": "11/05/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["表現優異", "高雄市政府教育局"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 9,
+        "title": "高中資訊學科能力複賽暨高職電腦程式設計比賽",
+        "date": "11/06/2022",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["表現優異", "高雄市政府教育局"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 10,
+        "title": "FTC",
+        "date": "02/01/2023",
+        "content": {
+            "title": ["Bureau"],
+            "content": ["國立科學工藝博物館"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 13,
+        "title": "智慧機器人創意賽 高中職組",
+        "date": "07/16/2022",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["第一名", "高雄市政府教育局"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 11,
+        "title": "高雄市青少年創意機器人競賽 高中職組",
+        "date": "07/16/2022",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["表現優異", "台灣玉山機器人協會"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 12,
+        "title": "WRO國際奧林匹亞機器人全國總決賽暨東亞AI科技大賽 高中職組",
+        "date": "08/19/2022",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["表現優異", "台灣玉山機器人協會"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+
+    {
+        "id": 14,
+        "title": "數理暨資訊學科能力競賽初賽 資訊學科",
+        "date": "04/22/2022",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["第一名", "高雄市立三民高級中學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 15,
+        "title": "數理暨資訊學科能力競賽初賽 資訊學科",
+        "date": "03/29/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["第一名", "高雄市立三民高級中學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    },
+    {
+        "id": 16,
+        "title": "數理暨資訊學科能力競賽初賽 物理學科",
+        "date": "03/29/2023",
+        "content": {
+            "title": ["Grade", "Bureau"],
+            "content": ["第二名", "高雄市立三民高級中學"]
+        },
+        "links": {
+            "title": [],
+            "link": []
+        }
+    }
+]

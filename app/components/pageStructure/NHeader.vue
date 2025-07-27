@@ -42,7 +42,7 @@ onMounted(() => {
 header {
     width: 100vw;
     height: 8vh;
-    background-color: var(--bg2);
+    background-color: var(--bg1);
     color: var(--tc1);
     opacity: 0.8;
     position: fixed;
