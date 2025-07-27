@@ -1,20 +1,42 @@
 <template>
     <header>
-        <div class="logo">
+        <a class="logo" href="/">
             <img src="/pageStructure/logo.webp" alt="Logo" />
             <h1>Abrams</h1>
-        </div>
-        <nav>
-            <ul>
+        </a>
+        <nav v-if="showNav" :class="{ active: !isMobile, inactive: isMobile }">
+            <ul :class="{ active: !isMobile, inactive: isMobile }">
                 <li><font-awesome-icon icon="fa-solid fa-house" /><a href="/">Home</a></li>
-                <li><font-awesome-icon icon="fa-solid fa-circle-info" /><a href="/about">About</a></li>
                 <li><font-awesome-icon icon="fa-solid fa-envelope" /><a href="/contact">Contact</a></li>
+                <li><font-awesome-icon icon="fa-solid fa-trophy" /><a href="/achieve">Achieve.</a></li>
+                <li><font-awesome-icon icon="fa-solid fa-diagram-project" /><a href="/work">Work</a></li>
+                <li><font-awesome-icon icon="fa-solid fa-code" /><a href="/project">Project</a></li>
             </ul>
         </nav>
+        <font-awesome-icon id="navSwitch" v-if="isMobile" icon="fa-solid fa-bars" @click="switchNav" />
     </header>
 </template>
 
-<script setup></script>
+<script setup>
+//values
+const isMobile = ref(false);
+const showNav = ref(true);
+
+//functions
+const switchNav = () => {
+    showNav.value = !showNav.value;
+};
+
+//run
+onMounted(() => {
+    if (window.innerWidth < window.innerHeight) {
+        isMobile.value = true;
+        showNav.value = false;
+    } else {
+        isMobile.value = false;
+    }
+});
+</script>
 
 <style scoped>
 header {
@@ -36,7 +58,7 @@ header {
 
 .logo {
     width: 10%;
-    height: 80%;
+    height: 60%;
     margin-left: 10px;
     display: flex;
     flex-direction: row;
@@ -51,9 +73,14 @@ header {
     border-radius: 99999px;
 }
 
-nav {
+h1 {
+    font-size: 150%;
+    color: var(--tc1);
+}
+
+nav.active {
     width: 70%;
-    height: 80%;
+    height: 60%;
     margin-right: 10px;
     display: flex;
     flex-direction: row;
@@ -61,12 +88,37 @@ nav {
     align-items: center;
 }
 
-nav ul {
+nav.inactive {
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: var(--bg2);
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul.active {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul.inactive {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -80,5 +132,13 @@ ul li {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#navSwitch {
+    width: auto;
+    height: 60%;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--tc1);
 }
 </style>

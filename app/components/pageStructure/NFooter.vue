@@ -1,35 +1,57 @@
 <template>
     <footer>
-        <div class="footer-content">
+        <div class="footer-content" :class="{ active: !isMobile, inactive: isMobile }">
             <div class="content-section">
-                <p class="section-title">Quick Links:</p>
+                <p class="section-title" :class="{ active: !isMobile, inactive: isMobile }">Quick Links:</p>
                 <ul>
-                    <li><font-awesome-icon icon="fa-solid fa-house" /><a href="/">Home</a></li>
-                    <li><font-awesome-icon icon="fa-solid fa-circle-info" /><a href="/about">About</a></li>
-                    <li><font-awesome-icon icon="fa-solid fa-envelope" /><a href="/contact">Contact</a></li>
+                    <li><font-awesome-icon icon="fa-solid fa-house" /><a href="/" :class="{ active: !isMobile, inactive: isMobile }">Home</a></li>
+                    <li>
+                        <font-awesome-icon icon="fa-solid fa-envelope" /><a href="/contact" :class="{ active: !isMobile, inactive: isMobile }"
+                            >Contact</a
+                        >
+                    </li>
+                    <li>
+                        <font-awesome-icon icon="fa-solid fa-trophy" /><a href="/achieve" :class="{ active: !isMobile, inactive: isMobile }"
+                            >Achieve.</a
+                        >
+                    </li>
+                    <li>
+                        <font-awesome-icon icon="fa-solid fa-diagram-project" /><a href="/work" :class="{ active: !isMobile, inactive: isMobile }"
+                            >Work</a
+                        >
+                    </li>
+                    <li>
+                        <font-awesome-icon icon="fa-solid fa-code" /><a href="/project" :class="{ active: !isMobile, inactive: isMobile }">Project</a>
+                    </li>
                 </ul>
             </div>
             <div class="content-section">
-                <p class="section-title">Contact:</p>
+                <p class="section-title" :class="{ active: !isMobile, inactive: isMobile }">Contact:</p>
                 <ul>
                     <li>
                         <font-awesome-icon icon="fa-solid fa-envelope" />
-                        <p>Email: abrams@g.ncu.edu.tw</p>
+                        <p :class="{ active: !isMobile, inactive: isMobile }">Email: abrams@g.ncu.edu.tw</p>
                     </li>
                     <li>
                         <font-awesome-icon icon="fa-brands fa-facebook" />
-                        <a href="https://www.facebook.com/chen.yuan.qian.845782">Facebook</a>
+                        <a href="https://www.facebook.com/chen.yuan.qian.845782" :class="{ active: !isMobile, inactive: isMobile }">Facebook</a>
                     </li>
                     <li>
                         <font-awesome-icon icon="fa-brands fa-instagram" />
-                        <a href="https://www.instagram.com/abrams_66">Instagram</a>
+                        <a href="https://www.instagram.com/abrams_66" :class="{ active: !isMobile, inactive: isMobile }">Instagram</a>
                     </li>
                 </ul>
             </div>
             <div class="content-section">
-                <p class="section-title">Source:</p>
+                <p class="section-title" :class="{ active: !isMobile, inactive: isMobile }">Source:</p>
                 <ul>
-                    <li><font-awesome-icon icon="fa-brands fa-github" /><a href="https://github.com/Abrams666/Main_Website">Github</a></li>
+                    <li>
+                        <font-awesome-icon icon="fa-brands fa-github" /><a
+                            href="https://github.com/Abrams666/Main_Website"
+                            :class="{ active: !isMobile, inactive: isMobile }"
+                            >Github</a
+                        >
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,12 +61,26 @@
     </footer>
 </template>
 
-<script setup></script>
+<script setup>
+//values
+const isMobile = ref(false);
+
+//functions
+
+//run
+onMounted(() => {
+    if (window.innerWidth < window.innerHeight) {
+        isMobile.value = true;
+    } else {
+        isMobile.value = false;
+    }
+});
+</script>
 
 <style scoped>
 footer {
     width: 94vw;
-    height: 20vh;
+    height: auto;
     padding: 3%;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -57,11 +93,18 @@ footer {
 }
 
 .footer-content {
-    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
+}
+
+.footer-content.active {
+    width: 60%;
+}
+
+.footer-content.inactive {
+    width: 90%;
 }
 
 .content-section {
@@ -74,8 +117,12 @@ footer {
     gap: 5px;
 }
 
-.section-title {
+.section-title.active {
     font-size: larger;
+}
+
+.section-title.inactive {
+    font-size: smaller;
 }
 
 .copyright {
@@ -106,5 +153,10 @@ ul li {
     flex-wrap: nowrap;
     align-items: center;
     gap: 5px;
+}
+
+li p.inactive,
+li a.inactive {
+    font-size: xx-small;
 }
 </style>
