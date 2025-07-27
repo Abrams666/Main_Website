@@ -1,7 +1,9 @@
 <template>
     <div class="container">
         <section id="sectionMain" class="section1">
-            <h1>I'm<TextTyping :text="['Student', 'Developer', 'Engineer', 'Programmer']" :time="10000" /></h1>
+            <h1 :class="{ active: !isMobile, inactive: isMobile }">
+                I'm<TextTyping :text="['Student', 'Developer', 'Engineer', 'Programmer']" :time="10000" />
+            </h1>
             <font-awesome-icon id="down" icon="fa-solid fa-angle-down" bounce />
         </section>
         <section class="section2"></section>
@@ -11,6 +13,20 @@
 <script setup>
 //import
 import TextTyping from "../components/index/textTyping.vue";
+
+//values
+const isMobile = ref(false);
+
+//functions
+
+//run
+onMounted(() => {
+    if (window.innerWidth < window.innerHeight) {
+        isMobile.value = true;
+    } else {
+        isMobile.value = false;
+    }
+});
 </script>
 
 <style scoped>
@@ -38,8 +54,10 @@ section {
 }
 
 #sectionMain {
-    height: 92vh;
-    background-image: url("/index/bgc1.jpg");
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    background-image: url("/index/bgc2.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -49,12 +67,19 @@ section {
 }
 
 h1 {
-    font-size: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+h1.active {
+    font-size: 80px;
+}
+
+h1.inactive {
+    font-size: 50px;
 }
 
 #down {

@@ -1,12 +1,13 @@
 <template>
     <div id="container">
-        <p id="text">{{ currentText }}</p>
-        <div id="cursor"></div>
+        <p :class="{ active: !isMobile, inactive: isMobile }" id="text">{{ currentText }}</p>
+        <div :class="{ active: !isMobile, inactive: isMobile }" id="cursor"></div>
     </div>
 </template>
 
 <script setup>
 //values
+const isMobile = ref(false);
 let currentText = ref("");
 let totalSteps = 0;
 let remainText = "";
@@ -21,6 +22,14 @@ function sleep(ms) {
 }
 
 //run
+onMounted(() => {
+    if (window.innerWidth < window.innerHeight) {
+        isMobile.value = true;
+    } else {
+        isMobile.value = false;
+    }
+});
+
 for (let i = 0; i < props.text.length; i++) {
     totalSteps += props.text[i].length * 2;
 }
@@ -62,15 +71,30 @@ onMounted(async () => {
 }
 
 #text {
-    font-size: 80px;
     margin-right: 5px;
 }
 
+#text.active {
+    font-size: 80px;
+}
+
+#text.inactive {
+    font-size: 50px;
+}
+
 #cursor {
-    width: 20px;
-    height: 80px;
     background-color: var(--dc1);
     animation: blink 1.5s infinite;
+}
+
+#cursor.active {
+    height: 100px;
+    width: 20px;
+}
+
+#cursor.inactive {
+    height: 50px;
+    width: 10px;
 }
 
 @keyframes blink {
