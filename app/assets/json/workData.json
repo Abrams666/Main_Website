@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "Class Manager",
+        "description": "I found that there are many scattered, messy, and easy-to-forget class tasks, which are often ignored because different teachers announce them in different ways, such as: ordering meals, announcing homework, arranging exams......, once someone forgets, it will easily reduce the operating efficiency of the entire class. So I wanted to use a platform to give everyone different permissions and manage each other to integrate these messy class tasks.",
+        "images": 1,
+        "content": [{ "title": "Language", "content": "HTML, CSS, ASP.Net, Visual Basic, MSSQL" }],
+        "links": [
+            { "name": "Code", "icon": "fa-brands fa-github", "url": "https://github.com/Abrams666/Class_Manager" },
+            {
+                "name": "Document",
+                "icon": "fa-brands fa-google-drive",
+                "url": "https://drive.google.com/file/d/1nKeZekDL7OGrxg_e0CwPsPlT2G4MlQuw/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "創意機器人競賽",
+        "description": "我們一開始想做可以協助確診者的機器人。我們思考了一些確診者在家中可能會需要的協助,並討論如何實現這些功能、是否有可以達到相同效果卻較簡單的方試,最後確定了機器人需要的零件與架構。",
+        "images": 1,
+        "content": [],
+        "links": [
+            {
+                "name": "Document",
+                "icon": "fa-brands fa-google-drive",
+                "url": "https://drive.google.com/file/d/1koBCXAAklKXxYWtITCL9te7IzR3XdyB9/view?usp=drive_link"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Heatmap Generator",
+        "description": "A program for converting values in excel into heatmap.",
+        "images": 1,
+        "content": [{ "title": "Language", "content": "Python" }],
+        "links": [{ "name": "Code", "icon": "fa-brands fa-github", "url": "https://github.com/Abrams666/Heatmap" }]
+    }
+]
